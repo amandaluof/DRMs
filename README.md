@@ -1,5 +1,4 @@
 # Rethinking Diverse Human Preference Learning through Principal Component Analysis
---------------
 
 This script provides the pipeline to extract embeddings, generate reward heads, and evaluate performance on [RewardBench](https://github.com/allenai/reward-bench) and the `rpr_five_class` dataset.
 
