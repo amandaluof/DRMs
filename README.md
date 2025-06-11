@@ -1,9 +1,12 @@
 # Rethinking Diverse Human Preference Learning through Principal Component Analysis
 
-This script provides the pipeline to extract embeddings, generate reward heads, and evaluate performance on [RewardBench](https://github.com/allenai/reward-bench) and the `rpr_five_class` dataset.
+Decomposed Reward Models (DRMs) is a novel approach that extracts diverse human preferences from binary comparisons without requiring fine-grained annotations. The framework represent human preferences as vectors and analyze them using PCA. By constructing a dataset of embedding differences between preferred and rejected responses, DRMs identify orthogonal basis vectors that capture distinct aspects of preference. These decomposed rewards can be flexibly combined to align with different user needs, offering an interpretable and scalable alternative to traditional reward models. DRMs can effectively extract meaningful preference dimensions (e.g., helpfulness, safety, humor) and adapt to new users without additional training. 
+This repo provides the pipeline to extract embeddings, generate reward heads, and evaluate performance on [RewardBench](https://github.com/allenai/reward-bench) and the `rpr_five_class` dataset.
 
+![Overview](./assets/DRM_framework.png)
 
 # Prepare
+<!-- - env -->
 - Download rewardBench 
   ```bash
   git clone https://github.com/allenai/reward-bench.git
@@ -14,7 +17,7 @@ This script provides the pipeline to extract embeddings, generate reward heads, 
 ```bash
 sh cal_reward_extract_emb.sh
 ```
-# Get reward head
+# Generate reward heads
 ```bash
 sh generate_head.sh
 ```
